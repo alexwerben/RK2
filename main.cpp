@@ -26,7 +26,7 @@ public:
     	while (count_.load() < MAX)
     	{
         	std::cout << "Pong" << std::endl;
-        	count_--;
+        	count_++;
         	cv_.notify_all();
         	cv_.wait(lock);
     	}
